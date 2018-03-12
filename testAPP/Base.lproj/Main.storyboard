@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="ipad9_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="testAPP" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="F3J-jo-XuA"/>
+                        <viewControllerLayoutGuide type="bottom" id="lha-uE-gVe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z88-n8-qC9">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4xg-uv-83u">
+                                <rect key="frame" x="20" y="924" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="BOm-vW-tNx"/>
+                                    <constraint firstAttribute="height" constant="100" id="lWG-Xg-5eL"/>
+                                </constraints>
+                                <state key="normal" image="play"/>
+                                <connections>
+                                    <action selector="togglePlayPause:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZWN-D8-U6v"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="z88-n8-qC9" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="3tC-tJ-Bms"/>
+                            <constraint firstItem="z88-n8-qC9" firstAttribute="bottom" secondItem="lha-uE-gVe" secondAttribute="top" id="EXW-Vt-tCq"/>
+                            <constraint firstItem="lha-uE-gVe" firstAttribute="top" secondItem="4xg-uv-83u" secondAttribute="bottom" id="Fbh-sO-bdG"/>
+                            <constraint firstItem="z88-n8-qC9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="QJE-4L-3cL"/>
+                            <constraint firstItem="4xg-uv-83u" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="hsO-5V-1RR"/>
+                            <constraint firstItem="z88-n8-qC9" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="lr6-kI-l2J"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="playButton" destination="4xg-uv-83u" id="8lM-Pn-RVY"/>
+                        <outlet property="playerView" destination="z88-n8-qC9" id="Ps1-mB-SMN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.96875" y="118.94531249999999"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="play" width="19" height="17"/>
+    </resources>
+</document>
